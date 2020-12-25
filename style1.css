@@ -1,0 +1,459 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+    height: 600px;
+    background-color: #f4f5f8;
+}
+.header{
+position: fixed;
+width: 100%;
+z-index: 999;
+top: 0;
+left: 0;
+height: 59px;
+background: rgb(255, 255, 255);
+display: none"
+}
+.header img:nth-child(1){
+  position: absolute;
+  top: 8px;
+  left: 150px;
+}
+.header img:nth-child(2){
+  position: absolute;
+  top:15px;
+  left: 195px;
+}
+
+.header>div{
+height: 59px;
+width: 70px;
+float: left;
+}
+#topbar a{  color: #555555;
+    display: block;
+    line-height: 59px;
+    font-size: 16px;
+    text-decoration: none;
+}
+#zhibo a{  color: #555555;
+  display: block;
+  line-height: 59px;
+  font-size: 16px;
+  text-decoration: none;
+}
+.jiantou{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;/*5px 足够了*/
+    border-top-color:#999;/*top箭头向下 bottom箭头向上*/
+    transition: transform 0.1s ease-in;
+  }
+a:hover .jiantou{
+    border-top-color: white;
+    transform:rotate(180deg);
+    transform-origin:50% 25%;/*设置旋转中心*/
+  }
+.kuang1:hover .dingyue{background: url(img/dingyue2.png); background-size: 18px 18px;}
+.kuang1:hover .lishi{background: url(img/history2.png); background-size: 18px 18px;}
+.kuang1:hover .erweima{background: url(img/qrcode2.png);background-size: 20px 20px;}
+.kuang1{
+  width: 65px;
+  height: 50px;
+}
+
+.kuang1 p{
+  color: #555555; font-size:12px;
+}
+
+.kuang{
+  display: none;
+  width: 270px;
+  height: 440px;
+  background-color: white;
+  border: 3px solid rgb(247,119,36);
+  position: absolute;
+  left:-90px;
+  top: 47px;
+  border-radius: 15px;
+}
+.kuang::before,.kuang::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom: 7px solid  rgb(247,119,36);
+  left: 50%;
+  margin-left: -7px;
+  top: -17px;
+}
+.kuang::after{
+  border-bottom-color: #fff;
+  top: -13px;
+}
+.kuang1:hover p{color:rgb(247,119,36);}
+
+
+/* 顶部小组件icon */
+.topicon{
+  position: absolute;
+  left:1200px;
+  top: 0;
+}
+.dingyue{
+    width: 18px; height:18px; position: absolute;top: 15px;  background: url(img/dingyue1.png);background-size: 18px 18px;
+}
+.lishi{
+     width:18px; height:18px;  position:absolute; top:15px;  background: url(img/history1.png);background-size: 18px 18px;
+}
+.erweima{
+  width: 20px; height: 20px; position: absolute;top:13px ; background: url(img/qrcode1.png);background-size: 20px 20px;
+}
+
+
+
+.kuang1:hover .kuang{
+  display: block;
+  top: 45px;
+  left: -110px;
+}
+
+div:hover>.kuang{
+ display: block;
+ top: 55px;
+ left: -120px;
+}
+
+div:hover>.kuang2{
+  display: block;
+  }
+
+.kuang2{
+  display: none;
+  height: 30px;
+  width: 65px;
+  border: 1px solid rgb(255,150,0);
+  background-color: rgb(255,150,0);
+  border-radius: 16px;
+  z-index: -1;
+  position: absolute;left: -18px; top: 14px;
+}
+.header>div:hover~.kuang2{
+  display: block;
+}
+
+.kuang2:hover~div span{
+  color: white;
+}
+#topbar a:hover{
+  color: white;
+}
+#topbar a:hover{
+  display: block;
+}
+a:hover~span.kuang2{
+  display: block;
+}
+/* 搜索框 */
+.sousuo{
+  position: relative;
+}
+input{
+  position: relative;
+  top: 13px;
+  left: 340px;
+  background:rgb(229,231,235);
+  width: 120px;
+  height: 20px;
+  padding: 6px 40px 6px 12px;
+  outline: 0;
+  border: 1px solid rgb(229,231,235);
+  border-radius: 17px;
+  font-size: 12px
+}
+/* 二维码 */
+.kuang3{
+  display: none;
+  width: 80px;
+  height: 80px;
+  border: 3px solid rgb(247,119,36);
+  background-color: white;
+  position: absolute;
+  left:-22px;
+  top: 47px;
+  border-radius: 4px;
+}
+.kuang3::before,.kuang3::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom: 7px solid rgb(247,119,36);
+  left: 50%;
+  margin-left: -7px;
+  top: -17px;
+}
+.kuang3::after{
+  border-bottom-color: #fff;
+  top: -14px;
+}
+.kuang1:hover .kuang3{
+  display: block;
+}
+
+/* 登录部分 */
+.icon-wode{
+  font-size: 22px !important;
+  color: #c2c2c2;
+  position: absolute;
+  top: 11px;
+}
+.kuang1:hover i{
+  color: rgb(247,119,36);
+}
+/* 直播部分 */
+#zhibo {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;/*flex-wrap 属性规定flex容器是单行或者多行*/
+margin-top: 70px;
+
+}
+#zhibo>div {
+  position: relative;
+  max-width:25%;
+  height: 220px;
+  background-color: #ffffff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin: 20px 0 0 30px;
+}
+.bofang{
+  opacity: 0;
+  filter: alpha(opacity=0);/*为了opacity兼容IE8及以下的浏览器*/
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 0 0 -25px;
+  background: url(https://a.msstatic.com/huya/main3/widget/game-live-item/img/play-icon_fbf7f.png) no-repeat;
+  transform: scale(2);
+  transition: all .25s ease-out;
+  z-index: 3;
+}
+#zhibo img{
+  width: 270px;
+  height: 150px;
+  z-index: 1;
+  transition: all .25s ease-out;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.title{
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  margin-top: 5px;
+}
+.ziliao{
+  font-size: 13px;
+  color: #999;
+}
+#zhibo div:hover i{
+   transform: scale(1);
+   opacity: 1;
+}
+#zhibo div:hover .mask{
+   opacity: 0.5;
+}
+/* 试了很多次不成功的原因：
+1.只有后代元素和兄弟元素（紧接在元素后的兄弟元素）才有效果，其他的:hover会失效
+2.a:hover b,b是子代，不能写出a:hover a b */
+.mask{position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 68%;
+transition: all .3s ease-out;
+opacity: 0;
+background: #000;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+z-index: 2;
+}
+
+
+@media screen and (max-width:980px){
+  #zhibo>div{
+       max-width: 33.33%;}
+}
+@media screen and (max-width:768px){
+  #zhibo>div{
+       max-width: 50%;}
+}
+@media screen and ( max-width:550px){
+  #zhibo>div{
+       max-width: 100%;}
+}
+/* 之前一直没成功，是因为忘了权重的原因 */
+
+
+
+/* 侧边信息栏 */
+.sidebar{
+  position: fixed;
+  bottom: 80px;
+  right: 0;
+  width: 40px;
+  z-index: 999;
+  text-align: center;
+}
+.sidebar a{
+  margin-top: 5px;
+  margin-bottom: 0;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(247,119,36) ;
+  border-radius: 100%;
+  background-color:white ;
+}
+.sidebar img{
+  position: relative;
+  top: 15%;
+  width: 25px;
+  height: 25px;
+}
+/* 底部信息栏 */
+.footer1{
+    padding: 30px 0;
+    border-top: 1px solid #f3f3f3;
+    font-size: 12px;
+    text-align: center;
+}
+.footer1 a{
+  text-decoration: none;
+  color:#7e7e7e;
+}
+.footer1 p{
+  color:#7e7e7e;
+}
+
+
+/* 天气 */
+
+.weather-container {
+  position: fixed;
+  display: none;
+  right: 40px;
+  bottom: 20px;
+  width: 240px;
+  height: 260px;
+  margin: 20px auto;
+  background: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+.weather-header {
+  height: 20px;
+  width: 95%;
+  padding-top: 10px;
+  padding-left: 10px;
+  color: #ffffff;
+}
+
+.weather-header-city {
+  font-size: 16px;
+  float: left;
+}
+.weather-header-time {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: middle;
+  margin-left: 10px;
+
+}
+.weather-content {
+  width: 100%;
+  height: 80px;
+  margin-top: 15px;
+  border-bottom: 1px solid white;
+}
+.weather-content ul{
+  list-style: none;
+}
+.weather-content-left {
+
+  padding-left: 0;
+  float: left;
+}
+.weather-content-left img {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-top: 5px;
+}
+.weather-content-content {
+  margin-left: 5px;
+  float: left;
+  color: white;
+}
+.weather-content-content ul li {
+  width: 100%;
+  height: 25px;
+}
+.weather-content-content .tem {
+  font-size: 18px;
+}
+.weather-content-content .wea {
+  font-size: 14px;
+  margin-top: 16px;
+  width: 84px;
+  overflow: hidden;
+}
+.weather-content-right {
+
+  font-size: 12px;
+  color: white;
+  float: right;
+  margin-right: 10px;
+}
+.weather-content-right ul{
+  list-style: none;
+}
+.weather-content-right li {
+  height: 22px;
+}
+.weather-list {
+  width: 100%;
+  margin-top: 15px;
+  font-size: 12px;
+}
+.weather-list ul {
+  width: 33%;
+  float: left;
+}
+.weather-list ul li {
+  text-align: center;
+  color: white;
+  width: 79px;
+  overflow: hidden;
+}
+.weather-list ul li.text {
+  height: 20px;
+}
+.weather-list img {
+  width: 50px;
+  height: 50px;
+}

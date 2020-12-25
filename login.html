@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入页</title>
+    <link rel="stylesheet" href="style2.css">
+    <!-- 需要网络支持，但更方便<link rel="stylesheet" href="http://at.alicdn.com/t/font_2253880_1chtup5oe7o.css"> -->
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src="js.js"></script>
+</head>
+<body>
+   <div class="box1">
+       <div class="box2">
+           <span class="denglu">登录</span>
+           <div class="yhm">
+               <i class="iconfont icon-wode" id="yhm"></i>
+               <span>用户名</span>
+               <input type="text"  placeholder="请输入用户名" autocomplete="off" onfocus="this.className='onfocus',yhm1()" onblur="this.className='onblur',yhm2()">
+           </div>
+           <div class="mm">
+               <i class="iconfont icon-ai242" id="mm"></i>
+               <span>密码</span>
+               <input type="password"  placeholder="请输入密码" autocomplete="off" onfocus="this.className='onfocus',mm1()" onblur="this.className='onblur',mm2()" oninput="tanchu()" id="mmk">
+               <i class="iconfont icon-biyan" id="by"></i>
+               <i class="iconfont icon-kejian" id="zy"></i>
+           </div>
+           <div class="wjmm">
+               <a href="">忘记密码？</a>
+           </div>
+           <div class="anniu">
+               <button class="button">登 录</button>
+           </div>
+           <div class="dsfdl">
+               <span>第三方登录</span>
+           </div>
+           <div class="wxqqwb">
+               <a class="wx yuan"><i class="iconfont icon-weixin"></i></a>
+               <a class="qq yuan"><i class="iconfont icon-QQ"></i></a>
+               <a class="wb yuan"><i class="iconfont icon-weibo"></i></a>
+           </div>
+           <div class="ljzc">
+               <span>立即注册</span>
+           </div>
+       </div>
+   </div>
+</body>
+</html>

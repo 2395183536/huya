@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(image/bg-01.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 700px;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.box2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    height: 590px;
+    background:#fff;
+}
+.denglu{
+    position: absolute;
+    top: 0;
+    display: block;
+    font-family: 'Microsoft Yahei';
+    font-size: 40px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+}
+.yhm{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 98px;
+}
+.mm{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 203px;
+}
+.wjmm{
+    width: 100%;
+    text-align: right !important;
+    padding-top: 8px;
+    padding-bottom: 31px;
+    position: absolute;
+    top:283px;
+}
+.anniu{
+    position: absolute;
+    width: 390px;
+    height: 50px;
+    top: 340px;
+}
+.dsfdl{
+    width: 100%;
+    padding-top: 45px;
+    position: absolute;
+    top: 390px;
+    text-align: center;
+}
+.wxqqwb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 485px;
+}
+.ljzc{
+    width: 100%;
+    padding-top: 25px;
+    text-align: center;
+    position: absolute;
+    top: 545px;
+}
+.onfocus{
+    border-color: #7f7f7f;
+}
+.onblur{
+    border-color: rgb(217,217, 217);
+}
+span{
+    font-family: 'Microsoft Yahei';
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.5;
+    padding-left: 7px;
+}
+input{
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.2;
+    display: block;
+    width: 340px;
+    height: 55px;
+    background: transparent;
+    padding: 0 5px 0 45px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid rgb(217,217, 217);
+
+}
+.iconfont{  
+    color: #adadad;
+}
+.icon-wode{
+    font-size: 25px !important;
+    position: absolute;
+    top:35px;
+    left: 2px; 
+}
+.icon-ai242{
+    font-size: 32px !important;
+    position: absolute;
+    top:35px;
+    left: 2px;
+}
+.icon-biyan{
+    font-size: 28px !important;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+   display: none;
+}
+.icon-kejian{
+    font-size: 28px !important;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    display: none;
+}
+.icon-weixin{
+    display: inline-block !important;
+    font-size: 28px !important;
+    color: white;
+}
+.icon-QQ{
+    display: inline-block !important;
+    font-size: 28px !important;
+    color: white;
+}
+.icon-weibo{
+    display: inline-block !important;
+    font-size: 28px !important;
+    color: white;
+}
+a {
+    font-family: 'Microsoft Yahei';
+    font-size: 14px;
+    line-height: 1.7;
+    text-decoration: none;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+.button{
+    color: white;
+    font-size: 18px;
+    width: 390px;
+    height: 50px;
+    display: block;
+    position: relative;
+    border-radius: 25px;
+    border: none;
+    /* 前后颜色设置一样才能结尾过渡的不明显 */
+    background-image: -webkit-linear-gradient(90deg, #00dbde, #fc00ff, #00dbde, #fc00ff, #00dbde);
+    background-image: -o-linear-gradient(90deg, #00dbde, #fc00ff, #00dbde, #fc00ff, #00dbde);
+    background-image: -moz-linear-gradient(90deg, #00dbde, #fc00ff, #00dbde, #fc00ff, #00dbde);
+    background-image: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde, #fc00ff, #00dbde);
+    background-size: 400%;
+}
+button:hover {
+    /* 创建动画
+        动画名称show
+        执行时间8秒
+        线性
+        循环执行
+    */
+    animation: show 30s linear infinite;
+}
+
+/* 动画主体
+    从初始到结束，移动背景图的位置
+*/
+
+@keyframes show {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+.yuan{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wx{
+   background-color:#05b10f;
+}
+.qq{
+    background-color: #1da1f2;
+}
+.wb{
+    background-color: #ea4335;
+}
+/* 在 IE10 +浏览器中，遇到密码输入框的时候，框内会自行显示一个小眼睛的图标，点击后也能显示密码
+			如果是普通文本输入框，则IE10会自动显示一个小叉，点击后可以清空文本框已输入的内容.
+			如果不想要IE10自带的这两个功能生效，可以在CSS里加入：
+			input::-ms-clear {display:none;}
+            input::-ms-reveal {display:none;} */
+			input::-ms-clear {display:none;}
+			input::-ms-reveal {display:none;}
